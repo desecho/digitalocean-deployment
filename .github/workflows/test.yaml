@@ -1,14 +1,25 @@
 name: Test
-on: push
-
+on:
+  push:
+    branches:
+      - master
 jobs:
   test:
     name: Run tests
     runs-on: ubuntu-latest
     steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+
       - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Install test requirements
-        run: curl https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+        uses: actions/checkout@v3
+
+      - name: Setup TFLint
+        uses: terraform-linters/setup-tflint@v2
+        with:
+          tflint_version: v0.36.2
+
       - name: Run tests
         run: make test
