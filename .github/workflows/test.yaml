@@ -21,5 +21,8 @@ jobs:
         with:
           tflint_version: v0.36.2
 
+      - name: Install actionlint
+        run: make install-actionlint
+
       - name: Run tests
         run: make test
