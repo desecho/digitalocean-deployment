@@ -10,6 +10,5 @@ Tests are automatically done in master branch.
 
 The following GitHub Actions are used:
 
-* [Cancel Workflow Action](https://github.com/marketplace/actions/cancel-workflow-action)
 * [Checkout](https://github.com/marketplace/actions/checkout)
 * [Setup TFLint](https://github.com/marketplace/actions/setup-tflint)
