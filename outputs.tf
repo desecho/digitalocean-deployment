@@ -11,4 +11,5 @@ output "ip" {
 output "kubeconfig" {
   value       = digitalocean_kubernetes_cluster.scrap_k8s_cluster.kube_config[0].raw_config
   description = "Kubeconfig file"
+  sensitive   = true
 }

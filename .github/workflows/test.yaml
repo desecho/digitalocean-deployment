@@ -17,7 +17,7 @@ jobs:
       - name: Setup TFLint
         uses: terraform-linters/setup-tflint@v2
         with:
-          tflint_version: v0.36.2
+          tflint_version: v0.38.1
 
       - name: Install actionlint
         run: make install-actionlint
