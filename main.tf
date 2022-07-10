@@ -3,7 +3,7 @@ provider "digitalocean" {}
 resource "digitalocean_kubernetes_cluster" "scrap_k8s_cluster" {
   name          = "scrap"
   region        = "tor1"
-  version       = "1.21.11-do.1"
+  version       = "1.22.11-do.0"
   auto_upgrade  = true
   surge_upgrade = true
 
