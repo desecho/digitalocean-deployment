@@ -9,7 +9,7 @@ resource "digitalocean_kubernetes_cluster" "scrap_k8s_cluster" {
 
   node_pool {
     name       = "worker-pool"
-    size       = "s-1vcpu-2gb"
-    node_count = 2
+    size       = "s-2vcpu-4gb"
+    node_count = 1
   }
 }
